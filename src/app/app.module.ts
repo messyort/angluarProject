@@ -12,7 +12,8 @@ import { CollectionComponent } from './collection';
 import { ListComponent, ListItemComponent } from './list';
 import { DetailComponent } from './detail';
 import { EditComponent } from './edit';
-
+import { DemoComponent} from './demo';
+import { DemoItemComponent } from './demo/demoItem.component'
 import {
   ContactService,
   UtilService,
@@ -21,7 +22,7 @@ import {
   PhonePipe,
   BtnClickDirective
 } from './shared';
-
+import {DemoService} from './demo/demo.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,8 @@ import {
     DetailComponent,
     CollectionComponent,
     EditComponent,
+    DemoComponent,
+    DemoItemComponent,
     HeaderComponent,
     FooterComponent,
     PhonePipe,
@@ -41,7 +44,7 @@ import {
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ContactService, UtilService],
+  providers: [ContactService, UtilService, DemoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

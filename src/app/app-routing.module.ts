@@ -5,6 +5,7 @@ import { CollectionComponent } from './collection';
 import { ListComponent } from './list';
 import { DetailComponent } from './detail';
 import { EditComponent } from './edit';
+import { DemoComponent } from './demo';
 
 export const routes: Routes = [
   {
@@ -31,11 +32,15 @@ export const routes: Routes = [
   {
     path: 'collection',
     component: CollectionComponent
+  },
+  {
+    path: 'demo',
+    component: DemoComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
