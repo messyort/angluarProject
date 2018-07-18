@@ -1,41 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { CollectionComponent } from './collection';
-import { ListComponent } from './list';
-import { DetailComponent } from './detail';
-import { EditComponent } from './edit';
+// import { HomeComponent } from './pages/home/home.component'
+// import { LoginComponent } from './pages/Login/login.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'login',
     pathMatch: 'full'
-  },
-  {
-    path: 'list',
-    component: ListComponent
-  },
-  {
-    path: 'list/:id',
-    component: DetailComponent
-  },
-  {
-    path: 'edit',
-    component: EditComponent
-  },
-  {
-    path: 'edit/:id',
-    component: EditComponent
-  },
-  {
-    path: 'collection',
-    component: CollectionComponent
   }
+  // {
+  //   path: 'login',
+  //   component: LoginComponent,
+  // },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  // }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: false})],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

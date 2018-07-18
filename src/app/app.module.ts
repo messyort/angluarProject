@@ -7,41 +7,29 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { CollectionComponent } from './collection';
-import { ListComponent, ListItemComponent } from './list';
-import { DetailComponent } from './detail';
-import { EditComponent } from './edit';
-
+import { HomeModule } from './pages/home/home.module';
+import { LoginModule } from './pages/login/login.module';
 import {
   ContactService,
-  UtilService,
-  FooterComponent,
-  HeaderComponent,
-  PhonePipe,
-  BtnClickDirective
+  UtilService
 } from './shared';
+
+import {DemoService} from './demo/demo.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    ListItemComponent,
-    DetailComponent,
-    CollectionComponent,
-    EditComponent,
-    HeaderComponent,
-    FooterComponent,
-    PhonePipe,
-    BtnClickDirective
+   
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    HomeModule,
+    LoginModule,
     AppRoutingModule
   ],
-  providers: [ContactService, UtilService],
+  providers: [ContactService, UtilService, DemoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

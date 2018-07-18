@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 
-const CONTACT_URL = '/assets/contacts.json';
+const CONTACT_URL = './assets/contacts.json';
 
 let _contacts;
 

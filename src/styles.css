@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+* {outline: 0px solid transparent; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none;}
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{ margin:0; padding:0;}
+em{ font-style:normal;}
+li{ list-style:none;}
+a{ text-decoration:none;color:#444}
+img{ border:none; vertical-align:top;}
+table{ border-collapse:collapse;}
+input,textarea{ outline:none;}
+textarea{ resize:none; overflow:auto;}
+html,body{ font:12px "UniversNextforHSBC-Regular","Arial","PingFang SC","Microsoft YaHei","Lantinghei SC","Heiti SC","simhei","sans-serif"; overflow-y: scroll;overflow-x: hidden}
+body {
+    background-color: #F3F3F3;
+}
+
+.clearfix:after{
+    content:".";        
+    display:block;        
+    height:0;        
+    clear:both;        
+    visibility:hidden;        
+}

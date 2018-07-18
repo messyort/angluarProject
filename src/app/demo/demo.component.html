@@ -1,0 +1,9 @@
+<p>DEMO</p>
+<ul *ngIf="isShowList">
+    <li *ngFor="let contact of contacts">
+        <demo-item [contact]="contact" (emitter)="emitterfunc($event)"></demo-item>
+    </li>
+</ul>
+<div *ngIf="!isShowList">
+    {{this.contacts}}
+</div>
