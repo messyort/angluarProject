@@ -13,8 +13,8 @@ import {
   ContactService,
   UtilService
 } from './shared';
-
-import {DemoService} from './demo/demo.service'
+import {MatInputModule,MatFormFieldModule} from '@angular/material';
+import {DemoService} from './demo/demo.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,8 @@ import {DemoService} from './demo/demo.service'
     HttpClientModule,
     HomeModule,
     LoginModule,
+    MatInputModule,
+    MatFormFieldModule,
     AppRoutingModule
   ],
   providers: [ContactService, UtilService, DemoService],

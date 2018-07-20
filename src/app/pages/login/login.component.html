@@ -2,6 +2,25 @@
 <page-header></page-header>
 <div class="content">
     <div class="container">
-       
+       <div class="form-field"> 
+           <h2 class="form-title">{{pageDes.welcomelab}}</h2>
+           <div class="inp-wrap">
+               <label for="username">Username</label>
+                <input name="username" placeholder="please input your username" value="" class="form-input">   
+           </div> 
+           <div class="inp-wrap">
+                <label for="password">Password</label>
+                 <input name="password" placeholder="please input your password" value="" class="form-input">   
+            </div> 
+            <div class="btn-wrap">
+                <button type="submit" class="form-btn">{{pageDes.commit_btn}}</button>
+                <button  class="form-register" (click)="goNext()">Register for Fusion</button>
+            </div>
+        </div>
+       <ul class="list">
+           <li *ngFor="let newitem of newsInfo">
+               <p>{{newitem}}</p>
+           </li>
+       </ul>
     </div>
 </div>
