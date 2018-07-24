@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-// import {HttpModule} from "@angular/http";
+import {HttpModule} from "@angular/http";
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatButtonModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
@@ -13,7 +13,6 @@ import {
   ContactService,
   UtilService
 } from './shared';
-import {MatInputModule,MatFormFieldModule} from '@angular/material';
 import {DemoService} from './demo/demo.service';
 
 @NgModule({
@@ -25,10 +24,10 @@ import {DemoService} from './demo/demo.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    HttpModule,
+    MatButtonModule,
     HomeModule,
     LoginModule,
-    MatInputModule,
-    MatFormFieldModule,
     AppRoutingModule
   ],
   providers: [ContactService, UtilService, DemoService],

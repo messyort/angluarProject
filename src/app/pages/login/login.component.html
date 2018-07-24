@@ -6,21 +6,17 @@
            <h2 class="form-title">{{pageDes.welcomelab}}</h2>
            <div class="inp-wrap">
                <label for="username">Username</label>
-                <input name="username" placeholder="please input your username" value="" class="form-input">   
+                <input type = "text" name="username" placeholder="please input your username" value="" class="form-input" [(ngModel)]="usernameVal">   
            </div> 
            <div class="inp-wrap">
                 <label for="password">Password</label>
-                 <input name="password" placeholder="please input your password" value="" class="form-input">   
+                 <input name="password" placeholder="please input your password" value="" class="form-input" [(ngModel)]="pwdVal">   
             </div> 
             <div class="btn-wrap">
-                <button type="submit" class="form-btn">{{pageDes.commit_btn}}</button>
-                <button  class="form-register" (click)="goNext()">Register for Fusion</button>
+                <button  class="form-btn" (click)="submit()">{{pageDes.commit_btn}}</button>
+                <button  class="form-register" (click)="goNext()">{{pageDes.step_btn}}</button>
             </div>
+            <!-- <button mat-raised-button color="primary">Primary</button> -->
         </div>
-       <ul class="list">
-           <li *ngFor="let newitem of newsInfo">
-               <p>{{newitem}}</p>
-           </li>
-       </ul>
     </div>
 </div>
