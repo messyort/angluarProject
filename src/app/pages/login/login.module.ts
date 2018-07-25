@@ -8,9 +8,10 @@ import { LoginRoutingModule } from './login-routing.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { AmountComponent } from '../../components/amount/amout.component';
 import { BackgroundColorDirective } from '../../directive/backgroundColor';
+import { unlessDirective } from '../../directive/unless'
 @NgModule({
   imports: [CommonModule,LoginRoutingModule,FormsModule,MatButtonModule],
-  declarations: [LoginComponent,HeaderComponent,AmountComponent,BackgroundColorDirective],
+  declarations: [LoginComponent,HeaderComponent,AmountComponent,BackgroundColorDirective,unlessDirective],
   exports: [LoginComponent]
 })
 export class LoginModule { }

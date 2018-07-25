@@ -21,7 +21,7 @@
         <div class="form-field"> 
                <amount [(value)]="number1"  [backgroundColor]="'green'"></amount>
                <div>{{number1}}</div>
-               <amount [value]="number2" (valueChange)="number2=$event"></amount>
+               <amount [value]="number2" (valueChange)="number2=$event" *unless="false"></amount>
                <div>{{number2}}</div>
                  <!-- <button mat-raised-button color="primary">Primary</button> -->
         </div>
