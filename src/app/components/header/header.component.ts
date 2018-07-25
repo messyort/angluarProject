@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {SharedService} from '../../utils/sharedService';
 
 @Component({
     selector: 'page-header',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-    constructor(){}
-
+    constructor(private _sharedService: SharedService){}
+    doClick(){
+        console.log(this._sharedService.list)
+    }
 }

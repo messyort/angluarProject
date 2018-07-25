@@ -1,4 +1,4 @@
-import {Component,OnInit} from '@angular/core';
+import {Component,OnInit,AfterViewInit} from '@angular/core';
 import {DemoService} from './demo.service';
 import {SharedService} from '../../utils/sharedService';
 
@@ -8,11 +8,11 @@ import {SharedService} from '../../utils/sharedService';
     styleUrls: ['../login/login.component.scss','./demo.component.css']
 })
 
-export class DemoComponent implements OnInit {
+export class DemoComponent implements OnInit,AfterViewInit {
     contacts: {};
     isShowList: Boolean = true;
     inputVal: string;
-    list:["zhangsan","lisi"]
+    list=["zhangsan","lisi"]
     constructor(
         private _demoService: DemoService,
         private _sharedService: SharedService
@@ -26,7 +26,10 @@ export class DemoComponent implements OnInit {
         //     this.contacts = err
         //     this.isShowList = false
         // })    
+        this._sharedService.list = this.list
         
+    }
+    ngAfterViewInit(){
         this._sharedService.list = this.list
     }
     emitterfunc(res: any){
@@ -35,6 +38,7 @@ export class DemoComponent implements OnInit {
     doClick(){
         if(this.inputVal!==null){
             this._sharedService.append(this.inputVal)
+            console.log(this._sharedService.list)
         }
         
     }
