@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit,OnChanges{
     isLoginPage: Boolean ;
     usernameVal: String;
     pwdVal: String;
+    number1=1;
+    number2=2;
     pageDes = {
       "welcomelab" : "" ,
       "commit_btn" : "" ,
@@ -30,6 +32,7 @@ export class LoginComponent implements OnInit,OnChanges{
       "commit_btn" : "Register",
       "step_btn" : "Register for Fusion"
     }
+    
     constructor(private userService: HttpService,){}
     ngOnInit(){
        this.isLoginPage = true;
