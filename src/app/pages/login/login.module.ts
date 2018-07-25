@@ -13,6 +13,6 @@ import { unlessDirective } from '../../directive/unless'
 @NgModule({
   imports: [CommonModule,LoginRoutingModule,FormsModule,MatButtonModule,MatTabsModule,MatCardModule],
   declarations: [LoginComponent,HeaderComponent,AmountComponent,BackgroundColorDirective,unlessDirective],
-  exports: [LoginComponent]
+  exports: [LoginComponent,HeaderComponent]
 })
 export class LoginModule { }
