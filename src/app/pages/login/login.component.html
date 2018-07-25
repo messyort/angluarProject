@@ -21,9 +21,14 @@
         <div class="form-field"> 
                <amount [(value)]="number1"  [backgroundColor]="'green'"></amount>
                <div>{{number1}}</div>
-               <amount [value]="number2" (valueChange)="number2=$event" *unless="false"></amount>
+               <amount [value]="number2" (valueChange)="number2=$event" *unless="false" #amount></amount>
                <div>{{number2}}</div>
-                 <!-- <button mat-raised-button color="primary">Primary</button> -->
+                <button mat-raised-button color="primary" (click)="doClick()">Primary</button>
+                <ul>
+                    <li *ngFor="let item of newsInfo">
+                        <p>{{item}}</p>
+                    </li>
+                </ul>
         </div>
     </div>
 </div>

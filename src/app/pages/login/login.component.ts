@@ -1,6 +1,7 @@
-import { Component,OnInit,OnChanges } from '@angular/core';
+import { Component,OnInit,OnChanges, AfterViewInit,ViewChild } from '@angular/core';
 import { HttpService } from '../../services/http-service';
-
+import { AmountComponent } from '../../components/amount/amout.component';
+import { CommonFunc } from '../../utils/commonFunc';
 @Component({
   selector: 'login-page',
   templateUrl: './login.component.html',
@@ -8,6 +9,7 @@ import { HttpService } from '../../services/http-service';
   providers: [HttpService]
 })
 export class LoginComponent implements OnInit,OnChanges{
+  @ViewChild('amount') _amount: AmountComponent;
     private pageStatus: String ;
     newsInfo: Array<String> = ["haha","heihei"];
     isLoginPage: Boolean ;
@@ -43,6 +45,10 @@ export class LoginComponent implements OnInit,OnChanges{
       console.log("changed")
     }
 
+    ngAfterViewInit(){
+      console.log(this._amount.value)
+    }
+
     goNext(){
       this.isLoginPage = !this.isLoginPage;
       // this.newsInfo.push("hehe")
@@ -69,5 +75,10 @@ export class LoginComponent implements OnInit,OnChanges{
     }
     registerErrHanlde(err){
       console.log(err)
+    }
+
+    doClick(){
+      this._amount.increment()
+      CommonFunc.add(1,2)
     }
 }
