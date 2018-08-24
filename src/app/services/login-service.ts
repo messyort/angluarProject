@@ -9,7 +9,7 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 
-export class HttpService {
+export class LoginService {
     constructor(private _http: Http){
 
     }

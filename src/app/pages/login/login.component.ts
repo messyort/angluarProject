@@ -1,12 +1,12 @@
 import { Component,OnInit,OnChanges, AfterViewInit,ViewChild } from '@angular/core';
-import { HttpService } from '../../services/http-service';
+import { LoginService } from '../../services/login-service';
 import { AmountComponent } from '../../components/amount/amout.component';
 import { CommonFunc } from '../../utils/commonFunc';
 @Component({
   selector: 'login-page',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [HttpService]
+  providers: [LoginService]
 })
 export class LoginComponent implements OnInit,OnChanges{
   @ViewChild('amount') _amount: AmountComponent;
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit,OnChanges{
       "step_btn" : "Register for Fusion"
     }
     
-    constructor(private userService: HttpService,){}
+    constructor(private userService: LoginService){}
     ngOnInit(){
        this.isLoginPage = true;
        this.pageDes = this.isLoginPage ? this.registerPageDes: this.loginPageDes
